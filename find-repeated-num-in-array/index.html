@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let arr = [2, 0, 4, 9, 14, 23, 7, 8, 9, 7, 0, 2, 85,85,85]
+        let len = arr.length
+        let repeatedNums = []
+        let filtered = []
+        for(let i = 0; i < len; i++){
+            for (let j = 0; j < len; j++) {
+                if((i !== j) && (arr[i] === arr[j])){
+                    if (arr[i] !== repeatedNums[i]) {
+                        repeatedNums.push(arr[i])
+                        console.log('6666');
+                    }
+                }
+            }
+        }
+
+        filtered = [...new Set (repeatedNums)]
+        document.body.innerHTML = filtered
+    </script>
+</body>
+</html>
